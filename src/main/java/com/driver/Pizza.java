@@ -29,7 +29,7 @@ public class Pizza {
         this.cheesePrice=80;
         this.paperBagPrice=20;
 
-        this.bill = "base Price Of The Pizza: "+this.billPrice+"\n";
+        this.bill = "Base Price Of The Pizza: "+this.billPrice+"\n";
     }
 
     public int getBillPrice(){
@@ -39,7 +39,7 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(isCheeseAdded==false){
-            billPrice = billPrice +cheesePrice;
+            billPrice = billPrice + cheesePrice;
             isCheeseAdded=true;
         }
     }
