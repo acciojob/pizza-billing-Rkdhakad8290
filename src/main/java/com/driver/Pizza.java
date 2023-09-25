@@ -2,7 +2,7 @@ package com.driver;
 
 public class Pizza {
 
-    private int billPrice; // Total peice
+    private int price; // Total peice
     private Boolean isVeg;
     private String bill;
 
@@ -19,27 +19,27 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-            this.billPrice =300;
+            this.price =300;
             this.toppingsPrice=70;
         }
         else{
-            this.billPrice =400;
+            this.price =400;
             this.toppingsPrice=120;
         }
         this.cheesePrice=80;
         this.paperBagPrice=20;
 
-        this.bill = "Base Price Of The Pizza: "+this.billPrice+"\n";
+        this.bill = "Base Price Of The Pizza: "+this.price +"\n";
     }
 
-    public int getBillPrice(){
-        return this.billPrice;
+    public int getPrice(){
+        return this.price;
     }
 
     public void addExtraCheese(){
         // your code goes here
         if(isCheeseAdded==false){
-            billPrice = billPrice + cheesePrice;
+            price = price + cheesePrice;
             isCheeseAdded=true;
         }
     }
@@ -47,7 +47,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (isToppingsAdded==false){
-            billPrice=billPrice+toppingsPrice;
+            price = price +toppingsPrice;
             isToppingsAdded=true;
         }
     }
@@ -55,7 +55,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if (isPaperBagAdded==false){
-            billPrice=billPrice+paperBagPrice;
+            price = price +paperBagPrice;
             isPaperBagAdded=true;
         }
     }
@@ -73,7 +73,7 @@ public class Pizza {
             if (isPaperBagAdded){
                 bill=bill+ "Paperbag Added: "+this.paperBagPrice+"\n";
             }
-            bill=bill+ "Total Price: "+billPrice+"\n";
+            bill=bill+ "Total Price: "+ price +"\n";
             isBillGenerated=true;
         }
         return this.bill;
